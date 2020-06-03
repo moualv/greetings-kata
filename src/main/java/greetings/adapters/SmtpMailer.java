@@ -1,6 +1,6 @@
 package greetings.adapters;
 
-import greetings.application.Mailer;
+import greetings.application.adapters.mailer.Mailer;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;

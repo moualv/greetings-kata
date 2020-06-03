@@ -5,7 +5,7 @@ import com.dumbster.smtp.SmtpServer;
 import com.dumbster.smtp.SmtpServerFactory;
 import com.github.javafaker.Faker;
 import greetings.adapters.SmtpMailer;
-import greetings.application.Mailer;
+import greetings.application.adapters.mailer.Mailer;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -26,5 +26,17 @@ public class UserDTO {
     public BirthDTO getBirth() {
         return this.birth;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof UserDTO) {
+            var user = (UserDTO)o;
+            return user.getMail().equals(mail) &&
+                    user.getName().equals(name) &&
+                    user.getBirth().equals(birth);
+        } else {
+            return false;
+        }
+    }
 }
 

@@ -14,7 +14,7 @@ import org.junit.jupiter.api.TestInstance;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class MailerTest {
+public class SmtpMailerTest {
     private SmtpServer smtpServerStub;
     private String to;
     private String subject;

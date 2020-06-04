@@ -1,19 +1,21 @@
-package unit.builders.repository.dtos;
+package builders.repository.dtos;
 
-import com.github.javafaker.Faker;
 import greetings.application.adapters.repository.dtos.BirthDTO;
 
 import java.time.LocalDate;
-import java.time.Month;
 
 public class BirthDTOBuilder {
 
-    private final int year;
-    private final int month;
-    private final int day;
+    private int year;
+    private int month;
+    private int day;
 
     private BirthDTOBuilder() {
         var now = LocalDate.now();
+        initFromDate(now);
+    }
+
+    private void initFromDate(LocalDate now) {
         this.year = now.getYear();
         this.month = now.getMonth().getValue();
         this.day = now.getDayOfMonth();
@@ -21,6 +23,12 @@ public class BirthDTOBuilder {
 
     public static BirthDTOBuilder create() {
         return new BirthDTOBuilder();
+    }
+
+    public BirthDTOBuilder birthdayToday() {
+        var date = LocalDate.now().minusYears(20);
+        initFromDate(date);
+        return this;
     }
 
     public BirthDTO build() {

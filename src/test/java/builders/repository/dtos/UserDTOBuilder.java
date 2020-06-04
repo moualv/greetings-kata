@@ -1,4 +1,4 @@
-package unit.builders.repository.dtos;
+package builders.repository.dtos;
 
 import com.github.javafaker.Faker;
 import greetings.application.adapters.repository.dtos.BirthDTO;
